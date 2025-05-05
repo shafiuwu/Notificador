@@ -1,0 +1,40 @@
+{
+  "name": "tioanime",
+  "version": "1.0.4",
+  "description": "TioAnime API is a content provider of the latest in the world of anime with sub in Spanish and free, in addition to providing different complementary information. Using as a reference the websites tioanime.com and myanimelist.net, to extract the data and information.",
+  "main": "./src/api.js",
+  "types": "./types/api.d.ts",
+  "scripts": {
+    "dev": "nodemon src/api.js"
+  },
+  "keywords": [
+    "tioanime",
+    "tioanime api",
+    "anime",
+    "scraper",
+    "anime-scraper",
+    "tio anime"
+  ],
+  "author": "Carlos Fernández <carlosfdezb@gmail.com>",
+  "contributors": [
+    "Carlos Fernández (https://github.com/carlosfdezb)"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.6",
+    "cloudscraper": "^4.6.0",
+    "nodemon": "^2.0.6",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosfdezb/tioanime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/carlosfdezb/tioanime/issues"
+  },
+  "homepage": "https://github.com/carlosfdezb/tioanime#readme"
+}
