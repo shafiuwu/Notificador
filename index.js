@@ -70,4 +70,25 @@ client.on('messageCreate', async (message) => {
     }
   });
 
+client.on('messageCreate', async (message) => {
+    if (message.author.bot) return;
+  
+    if (message.content === '!testing') {
+      try {
+        const animes = await tioanime.latestAnime();
+        const top5 = animes.slice(0, 5); // Solo los 5 primeros
+  
+        let respuesta = '**🆕 Últimos animes añadidos:**\n\n';
+        top5.forEach((anime, i) => {
+          respuesta += `${i + 1}. [${anime.title}] capitulo (${anime.episode})\n`;
+        });
+  
+        message.channel.send(respuesta);
+      } catch (error) {
+        console.error(error);
+        message.channel.send('❌ Hubo un error al obtener los animes.');
+      }
+    }
+  });
+
 client.login(process.env.DISCORDTOKEN);
